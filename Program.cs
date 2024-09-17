@@ -10,6 +10,12 @@ void MostrarMensaje2()
     Console.WriteLine("Prueba subida");
 }
 
+void MostrarMensaje3()
+{
+    Console.WriteLine("Prueba subida mas rapido");
+}
+
+
 Console.WriteLine("Hello, World!");
 
 
