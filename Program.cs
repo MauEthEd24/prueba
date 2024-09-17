@@ -5,6 +5,11 @@ void MostrarMensaje()
 }
 
 
+void MostrarMensaje2()
+{
+    Console.WriteLine("Prueba subida");
+}
+
 Console.WriteLine("Hello, World!");
 
 
