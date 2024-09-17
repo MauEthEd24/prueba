@@ -56,11 +56,15 @@ do
         case "F":
             Console.WriteLine("");
             Console.WriteLine("F) Mostrar los elementos de un arreglo unidimensional (PROC).");
-            
+            Console.Write("Ingresar los elementos para el arreglo: ");
+            double[] numeros = new double[Convert.ToInt32(Console.ReadLine())];
+            ArregloDeNumeros(numeros);
             break;
 
         case "G":
             Console.WriteLine("");
+            Console.WriteLine("Mostrar los nombres de personas almacenados en una lista predefinida");
+            ListarNombres();
             break;
 
 
@@ -79,6 +83,37 @@ do
 } while (opcion!="S");
 
 
+
+//G mostrar nombres de personas en una lista
+void ListarNombres() {
+    List<string> nombres = new List<string>();
+
+    nombres.Add("Mauri");
+    nombres.Add("Martin");
+    nombres.Add("Edrik");
+    nombres.Add("Paty");
+    nombres.Add("Ethan");
+    nombres.Add("Alex");
+
+    foreach (string nomb in nombres) 
+    {
+        Console.WriteLine($"nombre ingresado: {nomb}");
+    }
+
+}
+
+
+//F Mostrar los elementos de un arreglo unidimensional (PROC).");
+double[] ArregloDeNumeros(double[] numeros)
+{
+    for (int i = 0; i < numeros.Length; i++)
+    {
+        Console.Write("Ingrese el primer valor " + (i + 1) + ": ");
+        numeros[i] = Convert.ToInt32(Console.ReadLine());
+
+    }
+    return numeros;
+}
 
 
 //E Calcular el área de un círculo del RADIO  pi x radio al cuadrado
