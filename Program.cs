@@ -34,19 +34,29 @@ do
             break;
 
         case "C":
-            Console.WriteLine("");
+            Console.WriteLine("Sumar los 100 primeros números");
+            SumarCienNumerosNaturales();
             break;
 
         case "D":
-            Console.WriteLine("");
+            Console.WriteLine("D) Imprimer los números del 1 al ingresado por usuario");
+            Console.WriteLine("Ingrese un número");
+            numero = Convert.ToInt32(Console.ReadLine());
+            MostrarNumerosSecuencia(numero);
             break;
 
         case "E":
             Console.WriteLine("");
+            Console.WriteLine("E) Calcular el área del circulo, ingresando el valor del RADIO");
+            Console.Write("Ingrese el valor del RADIO: ");
+            double radio = Convert.ToDouble(Console.ReadLine());
+            calcularAreaCirculo(radio);
             break;
 
         case "F":
             Console.WriteLine("");
+            Console.WriteLine("F) Mostrar los elementos de un arreglo unidimensional (PROC).");
+            
             break;
 
         case "G":
@@ -69,6 +79,47 @@ do
 } while (opcion!="S");
 
 
+
+
+//E Calcular el área de un círculo del RADIO  pi x radio al cuadrado
+double calcularAreaCirculo(double numero)
+{
+    double area = 0;
+    double pi = 3.1415;
+    area = pi * (Math.Pow(numero, 2));
+    Console.WriteLine($"El área del Círculo es: {area}");
+
+    return area;
+}
+
+
+//D imprimir los números del 1 al número insertado
+void MostrarNumerosSecuencia(int numero)
+{
+    //int contador = numero;
+    for (int contador = 1; contador <= numero; contador++)
+    {
+        //contador = contador + 1;
+        Console.WriteLine(contador);
+    }
+}
+
+
+
+
+//C     Console.WriteLine("C) Sumar los 100 primeros números naturales");
+void SumarCienNumerosNaturales()
+{
+    int contador = 0;
+    for (int i = 0;i <= 100; i++) 
+    {
+        contador += i ; 
+        //i++;
+
+        Console.WriteLine(contador);
+            
+    }
+}
 
 
 
